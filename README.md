@@ -1,4 +1,4 @@
-# msfilho/cordova-plugin-native-spinner
+# msfilho/cordova-plugin-native-spinner-extra
 
 ## Platforms
 | <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/511px-Android_robot.svg.png" width="48px" height="48px" alt="Android logo"> | <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/2000px-Apple_logo_black.svg.png" width="48px" height="48px" alt="iOS logo"> | <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Windows_logo_-_2012.svg/2000px-Windows_logo_-_2012.svg.png" width="48px" height="48px" alt="Windows logo"> | <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Windows_logo_-_2012.svg/2000px-Windows_logo_-_2012.svg.png" width="48px" height="48px" alt="Windows logo">
@@ -14,10 +14,10 @@
 
 **Current state from git**:
 
-* PhoneGap - `phonegap local plugin add hhttps://github.com/msfilho/cordova-plugin-native-spinner`
-* Cordova - `cordova plugin add https://github.com/msfilho/cordova-plugin-native-spinner`
+* PhoneGap - `phonegap local plugin add hhttps://github.com/msfilho/cordova-plugin-native-spinner-extra`
+* Cordova - `cordova plugin add https://github.com/msfilho/cordova-plugin-native-spinner-extra`
 ```
-cordova plugin add https://github.com/msfilho/cordova-plugin-native-spinner.git
+cordova plugin add https://github.com/msfilho/cordova-plugin-native-spinner-extra.git
 cordova prepare
 ```
 
@@ -89,7 +89,4 @@ SpinnerDialog.hide();
 
 ## License
 See "LICENSE".
-Based on https://github.com/Paldom/SpinnerDialog with lots of awesome improvements! :star: :tada: :rocket: :star:
-
-[npm-url]: https://npmjs.org/package/cordova-plugin-native-spinner
-[npm-image]: https://img.shields.io/npm/v/cordova-plugin-native-spinner.svg
+Based on https://github.com/Paldom/SpinnerDialog and greybax/cordova-plugin-native-spinner with extra options.

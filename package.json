@@ -1,15 +1,15 @@
 {
-  "name": "cordova-plugin-native-spinner-msfilho",
+  "name": "cordova-plugin-native-spinner-extra",
   "version": "1.0.8",
   "description": "A Cordova plugin for showing a progress indicator based on Paldom/SpinnerDialog and greybax/cordova-plugin-native-spinner",
   "author": "Marcos Souza",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/msfilho/cordova-plugin-native-spinner.git"
+    "url": "git+https://github.com/msfilho/cordova-plugin-native-spinner-extra.git"
   },
   "cordova": {
-    "id": "cordova-plugin-native-spinner-msfilho",
+    "id": "cordova-plugin-native-spinner-extra",
     "platforms": [
       "android",
       "ios",
@@ -48,6 +48,6 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/greybax/cordova-plugin-native-spinner/issues"
+    "url": "https://github.com/msfilho/cordova-plugin-native-spinner-extra/issues"
   }
 }
