@@ -3,13 +3,13 @@
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:amazon="http://schemas.android.com/apk/lib/com.amazon.device.ads"
   xmlns:rim="http://www.blackberry.com/ns/widgets"
-  id="msfilho.greybax.spinnerdialog"
+  id="br.com.msfilho.greybax.spinnerdialog"
   version="1.0.8">
 
   <name>cordova-plugin-native-spinner</name>
   <description>
       Cordova plugin for showing a progress indicator based on Paldom/SpinnerDialog.
-      for Android, iOS, Windows 10 and Windows Phone 8.
+      for Android, iOS, Windows 10 and Windows Phone 8, with Theme and Style options.
   </description>
   <license>MIT</license>
   <keywords>phonegap,android,ios,wp8,windows,phone,spinner,dialog,progress,indicator</keywords>
@@ -28,12 +28,12 @@
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="SpinnerDialog">
-        <param name="android-package" value="com.greybax.spinnerdialog.SpinnerDialog"/>
+        <param name="android-package" value="br.com.msfilho.greybax.spinnerdialog.SpinnerDialog"/>
       </feature>
     </config-file>
     
-    <source-file src="src/android/SpinnerDialog.java" target-dir="src/com/greybax/spinnerdialog" />
-    <source-file src="src/android/CallbackProgressDialog.java" target-dir="src/com/greybax/spinnerdialog" />
+    <source-file src="src/android/SpinnerDialog.java" target-dir="src/br/com/msfilho/greybax/spinnerdialog" />
+    <source-file src="src/android/CallbackProgressDialog.java" target-dir="src/br/com/msfilho/greybax/spinnerdialog" />
   </platform>
 
   <!-- ios -->
