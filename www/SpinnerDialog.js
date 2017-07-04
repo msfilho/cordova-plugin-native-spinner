@@ -1,7 +1,7 @@
 var exec = require('cordova/exec');
 
 module.exports = {
-  show: function (title, message, cancelCallback, iosOptions, androidOptions) {
+  show: function (title, message, cancelCallback, options) {
     if (cancelCallback == true && typeof cancelCallback !== "function") {
       cancelCallback = function () { };
     }
@@ -11,17 +11,17 @@ module.exports = {
     var params = [title, message, !!cancelCallback];
     
     if (isPlatformIos) {
-      if (typeof iosOptions != "object") {
-        iosOptions = { overlayOpacity: 0.35, textColorRed: 1, textColorGreen: 1, textColorBlue: 1 }
+      if (typeof options != "object") {
+        options = { overlayOpacity: 0.35, textColorRed: 1, textColorGreen: 1, textColorBlue: 1 }
       }
-      params = params.concat([(iosOptions.overlayOpacity || 0.35), (iosOptions.textColorRed || 1), (iosOptions.textColorGreen || 1), (iosOptions.textColorBlue || 1)])
+      params = params.concat([(options.overlayOpacity || 0.35), (options.textColorRed || 1), (options.textColorGreen || 1), (options.textColorBlue || 1)])
     }
-
+    
     if (isPlatformAndroid) {
-      if (typeof androidOptions != "object") {
-        androidOptions = { theme: 'DEVICE_LIGHT', style: 'SPINNER' }
+      if (typeof options != "object") {
+        options = { theme: 'DEVICE_LIGHT', style: 'SPINNER' }
       }
-      params = params.concat([(androidOptions.theme || 'DEVICE_LIGHT'), (androidOptions.style || 'SPINNER')])
+      params = params.concat([(options.theme || 'DEVICE_LIGHT'), (options.style || 'SPINNER')])
     }
     
     cordova.exec(cancelCallback, null, 'SpinnerDialog', 'show', params);

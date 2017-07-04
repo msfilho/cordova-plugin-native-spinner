@@ -7,7 +7,6 @@ import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
-import org.json.JSONObject;
 import org.json.JSONException;
 
 import android.app.ProgressDialog;
@@ -24,14 +23,12 @@ public class SpinnerDialog extends CordovaPlugin {
   public SpinnerDialog() {
   }
 
-  public boolean execute(String action, String args, final CallbackContext callbackContext) throws JSONException {
+  public boolean execute(String action, final JSONArray args, final CallbackContext callbackContext) throws JSONException {
     if (action.equals("show")) {
 
-      final JSONArray argsArr = new JSONArray(args);
-      final JSONObject argsObj = new JSONObject(args);
-      final String title = "null".equals(argsArr.getString(0)) ? null : argsArr.getString(0);
-      final String message = "null".equals(argsArr.getString(1)) ? null : argsArr.getString(1);
-      final boolean isFixed = argsArr.getBoolean(2);
+      final String title = "null".equals(args.getString(0)) ? null : args.getString(0);
+      final String message = "null".equals(args.getString(1)) ? null : args.getString(1);
+      final boolean isFixed = args.getBoolean(2);
                 
       final CordovaInterface cordova = this.cordova;
       Runnable runnable = new Runnable() {
@@ -49,10 +46,10 @@ public class SpinnerDialog extends CordovaPlugin {
           };
 
           int theme = 5; // ProgressDialog.THEME_DEVICE_DEFAULT_LIGHT
-          if (argsObj.has("theme")) {
+          
             String themeArg = null;
             try {
-              themeArg = argsObj.getString("theme");
+              themeArg = args.getString(3);
             } catch (JSONException e) {
               // e.printStackTrace();
             }
@@ -67,18 +64,18 @@ public class SpinnerDialog extends CordovaPlugin {
             if ("HOLO_LIGHT".equals(themeArg)) {
               theme = 3; // ProgressDialog.THEME_HOLO_LIGHT
             }
-          }
+          
 
           int style = ProgressDialog.STYLE_SPINNER;
-          if (argsObj.has("progressStyle")) {
+          
             try {
-              if ("HORIZONTAL".equals(argsObj.getString("progressStyle"))) {
+              if ("HORIZONTAL".equals(args.getString(4))) {
                 style = ProgressDialog.STYLE_HORIZONTAL;
               }
             } catch (JSONException e) {
               // e.printStackTrace();
             }
-          }
+          
           
           ProgressDialog dialog;
           if (isFixed) {
