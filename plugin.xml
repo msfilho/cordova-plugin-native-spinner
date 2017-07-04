@@ -3,7 +3,7 @@
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:amazon="http://schemas.android.com/apk/lib/com.amazon.device.ads"
   xmlns:rim="http://www.blackberry.com/ns/widgets"
-  id="greybax.msfilho.spinnerdialog"
+  id="msfilho.greybax.spinnerdialog"
   version="1.0.8">
 
   <name>cordova-plugin-native-spinner</name>
