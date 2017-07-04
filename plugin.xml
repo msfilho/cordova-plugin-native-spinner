@@ -3,7 +3,7 @@
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:amazon="http://schemas.android.com/apk/lib/com.amazon.device.ads"
   xmlns:rim="http://www.blackberry.com/ns/widgets"
-  id="msfilho.greybax.spinnerdialog"
+  id="br.com.msfilho.spinnerdialog"
   version="1.0.8">
 
   <name>cordova-plugin-native-spinner</name>
@@ -28,12 +28,12 @@
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="SpinnerDialog">
-        <param name="android-package" value="br.com.msfilho.greybax.spinnerdialog.SpinnerDialog"/>
+        <param name="android-package" value="br.com.msfilho.spinnerdialog.SpinnerDialog"/>
       </feature>
     </config-file>
     
-    <source-file src="src/android/SpinnerDialog.java" target-dir="src/br/com/msfilho/greybax/spinnerdialog" />
-    <source-file src="src/android/CallbackProgressDialog.java" target-dir="src/br/com/msfilho/greybax/spinnerdialog" />
+    <source-file src="src/android/SpinnerDialog.java" target-dir="src/br/com/msfilho/spinnerdialog" />
+    <source-file src="src/android/CallbackProgressDialog.java" target-dir="src/br/com/msfilho/spinnerdialog" />
   </platform>
 
   <!-- ios -->

@@ -1,5 +1,5 @@
 // cordova-plugin-native-spinner
-package com.greybax.spinnerdialog;
+package br.com.msfilho.spinnerdialog;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.PluginResult;
