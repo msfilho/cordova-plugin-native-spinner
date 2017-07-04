@@ -19,9 +19,9 @@ module.exports = {
     
     if (isPlatformAndroid) {
       if (typeof options != "object") {
-        options = { theme: 'DEVICE_LIGHT', style: 'SPINNER' }
+        options = { theme: 'DEVICE_LIGHT', progressStyle: 'SPINNER' }
       }
-      params = params.concat([(options.theme || 'DEVICE_LIGHT'), (options.style || 'SPINNER')])
+      params = params.concat([(options.theme || 'DEVICE_LIGHT'), (options.progressStyle || 'SPINNER')])
     }
     
     cordova.exec(cancelCallback, null, 'SpinnerDialog', 'show', params);
