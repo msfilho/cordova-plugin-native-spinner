@@ -41,7 +41,7 @@ cordova prepare
 - __title__: Spinner title (Android only). Optional. _(String)_
 - __message__: Spinner message. Optional. _(String)_
 - __cancelCallback__: Callback to invoke when spinner cancel event fired (tap or Android hardware back button event). If set, spinner dialog will be fixed, you should explicitly call `SpinnerDialog.hide`. Due to legacy reasons you can provide boolean value (true/false) to set spinner not cancelable. Optional, defaults to `false`. _(Function/Boolean)_
-- __options__: `Android` and `iOS` specific options. In `Android` you can use `theme` and `progressStyle`. In iOS you can use `overlayOpacity`,  `textColorRed`, `textColorGreen` and `textColorBlue`. _(Object)_
+- __options__: `Android` and `iOS` specific options. In `Android` you can use `theme` and `progressStyle`. In `iOS` you can use `overlayOpacity`,  `textColorRed`, `textColorGreen` and `textColorBlue`. _(Object)_
 
 #### SpinnerDialog.hide
     SpinnerDialog.hide();
