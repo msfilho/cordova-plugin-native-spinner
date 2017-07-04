@@ -16,7 +16,7 @@ public class CallbackProgressDialog extends ProgressDialog {
     super(context);
   }
 
-  public static CallbackProgressDialog show(Context context, int theme, int.style,
+  public static CallbackProgressDialog show(Context context, int theme, int style,
       CharSequence title, CharSequence message, boolean indeterminate,
       boolean cancelable, OnCancelListener cancelListener,
       CallbackContext callbackContext) {
