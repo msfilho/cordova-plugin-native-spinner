@@ -9,13 +9,10 @@
 
 **Latest stable release**: 
 
-* PhoneGap - `phonegap local plugin add cordova-plugin-spinner-dialog`
-* Cordova - `cordova plugin add cordova-plugin-spinner-dialog`
+* Ionic - `ionic plugin add https://github.com/msfilho/cordova-plugin-native-spinner-extra.git`
+* Cordova - `cordova plugin add https://github.com/msfilho/cordova-plugin-native-spinner-extra.git`
+* PhoneGap - `phonegap local plugin add https://github.com/msfilho/cordova-plugin-native-spinner-extra.git`
 
-**Current state from git**:
-
-* PhoneGap - `phonegap local plugin add hhttps://github.com/msfilho/cordova-plugin-native-spinner-extra`
-* Cordova - `cordova plugin add https://github.com/msfilho/cordova-plugin-native-spinner-extra`
 ```
 cordova plugin add https://github.com/msfilho/cordova-plugin-native-spinner-extra.git
 cordova prepare
