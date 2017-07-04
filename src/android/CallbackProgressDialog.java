@@ -12,7 +12,7 @@ public class CallbackProgressDialog extends ProgressDialog {
 
   public static CallbackContext callbackContext;
 
-  public CallbackProgressDialog(Context context) {
+  public CallbackProgressDialog(Context context, int theme) {
     super(context);
   }
 

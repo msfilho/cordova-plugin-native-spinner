@@ -7,6 +7,7 @@ import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
+import org.json.JSONObject;
 import org.json.JSONException;
 
 import android.app.ProgressDialog;
@@ -26,8 +27,8 @@ public class SpinnerDialog extends CordovaPlugin {
   public boolean execute(String action, String args, final CallbackContext callbackContext) throws JSONException {
     if (action.equals("show")) {
 
-      JSONArray argsArr = new JSONArray(args);
-      JSONObject argsObj = new JSONObject(args);
+      final JSONArray argsArr = new JSONArray(args);
+      final JSONObject argsObj = new JSONObject(args);
       final String title = "null".equals(argsArr.getString(0)) ? null : argsArr.getString(0);
       final String message = "null".equals(argsArr.getString(1)) ? null : argsArr.getString(1);
       final boolean isFixed = argsArr.getBoolean(2);
@@ -85,10 +86,10 @@ public class SpinnerDialog extends CordovaPlugin {
             if (!SpinnerDialog.this.spinnerDialogStack.empty()) {
               dialog = SpinnerDialog.this.spinnerDialogStack.peek(); 
               if (title != null) {
-                dialog.setTitle(title);	
+                dialog.setTitle(title); 
               }
               if (message!=null) {
-                dialog.setMessage(message);	
+                dialog.setMessage(message); 
               }
             }
             else{
@@ -100,11 +101,11 @@ public class SpinnerDialog extends CordovaPlugin {
             if (!SpinnerDialog.this.spinnerDialogStack.empty()) {
               dialog = SpinnerDialog.this.spinnerDialogStack.peek(); 
               if (title != null) {
-                dialog.setTitle(title);	
+                dialog.setTitle(title); 
               }
               if (message!=null) {
-                dialog.setMessage(message);	
-              }	
+                dialog.setMessage(message); 
+              } 
             }
             else{
               dialog = ProgressDialog.show(cordova.getActivity(), title, message, true, true, onCancelListener);
