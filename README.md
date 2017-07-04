@@ -63,7 +63,7 @@ SpinnerDialog.show(null, null, true);
 // Note: callback fires on tap events and Android hardware back button click event
 SpinnerDialog.show(null, null, function () {console.log("callback");});
 
-// Set spinner dialog fixed with Theme and Style options
+// Set spinner dialog fixed with Theme and Style options (Android only)
 SpinnerDialog.show("title", "message", true, { theme: 'DEVICE_LIGHT', progressStyle: 'SPINNER' });
 
     `theme`: can be one of the following: `TRADITIONAL`, `DEVICE_DARK`, `DEVICE_LIGHT` (default), `HOLO_DARK`, `HOLO_LIGHT`
